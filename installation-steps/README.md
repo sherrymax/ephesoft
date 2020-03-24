@@ -1,6 +1,6 @@
 # Ephesoft Installation Steps
 
-## Setup an AWS EC2 Instance using Ephesoft image
+## 1. Setup an AWS EC2 Instance from Ephesoft image
 1. Select the Ephesoft AMI from the AWS console.![Ephesoft-image](resources/1.png)
 2. Review and Launch an EC2 Instance.
 3. Note down the `IP address` of this Ephesoft EC2 Instance.
@@ -16,7 +16,7 @@ slmgr -rearm
 7. Open port `8080` in the Windows Firewall to get access the web UI without doing an RDP, for future.![win-firewall](resources/2.png)
 8. A valid Ephesoft license is required for successful login.
 
-## Steps to get a valid Ephesoft license
+## 2. Get a valid Ephesoft license
 
 1. Send a request to tickets@ephesoft.com to create a Customer Portal account.
 2. To submit a new license request, please log in to [License Management page](https://ephesoft.force.com/login?ec=302&startURL=%2Fs%2Flicenses).![license-request](resources/3.png)
