@@ -27,8 +27,8 @@ The 'details.properties' file is available at 'Ephesoft Installation Folder\depe
 4.  Copy the ephesoft.lic file to the following location: `Ephesoft Installation Folder\dependencies\license-util` directory.
 5.  Open the command line by running it as `Administrator` and navigate to the `Ephesoft Installation Folder\dependencies\license-util` directory
 6.  Type `install-license.bat` and run it `TWICE`.
-7.  Restart the `Ephesoft services` to reset the license details.
-8.  Open browser and go to `http://localhost:8080/dcma/` using `ephesoft/demo`.
+7.  Restart the `Ephesoft services` to reset the license details. ![ephesoft-service](resources/5.png)
+9.  Open browser and go to `http://localhost:8080/dcma/` using `ephesoft/demo`.
 
 ```
 Tip: If you have errors when trying to run Ephesoft, try the following:
