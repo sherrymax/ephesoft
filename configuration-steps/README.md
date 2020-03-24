@@ -13,7 +13,34 @@ Please follow these steps for batch class management.
 ![](resources/10.png)
 8. Make sure all the changes are saved and deployed by clicking the `Apply` and `Deploy` buttons.
 ## 2. CMIS Import
-1. Make sure the values are entered correctly for importing documents from ACS to Ephesoft.![](resources/11.png)
+   Make sure the values are entered correctly for importing documents from ACS to Ephesoft.![](resources/11.png)
+
+| Property       | Value                                                     |
+| -------------- | --------------------------------------------------------- |
+| Server URL     | http://\<host-name\>/alfresco/api/cmis/versions/1.1/atom/ |
+| Username       | demo                                                      |
+| Password       | demo                                                      |
+| Repository Id  | -default-                                                 |
+| File Extension | pdf;tif                                                   |
+| Folder         | sites/hr-department/documentlibrary/Contracts/Drafts      |
+| Property       | ephesoft:OCR-ready                                        |
+| Value          | ready                                                     |
+| New Value      | OCR In Progress                                           |
+| CMIS Version   | 1.1                                                       |
+| Enabled        | checked                                                   |
+
 ## 3. CMIS Export
-1. Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
+   Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
+   | Property                   | Value                                                                                               |
+   | -------------------------- | --------------------------------------------------------------------------------------------------- |
+   | Cmis Root Folder Name      | sites/hr-department/documentlibrary/Contracts/GeneratedContracts                                    |
+   | Cmis Upload File Extension | demo                                                                                                |
+   | Cmis Server URL            | http://ec2-3-83-105-79.compute-1.amazonaws.com/alfresco/api/-default-/public/cmis/versions/1.1/atom |
+   | Cmis Server User Name      | demo                                                                                                |
+   | Cmis Server User Password  | demo                                                                                                |
+   | Cmis Server Repository Id  | -default-                                                                                           |
+   | Cmis Server Switch ON/OFF  | ON                                                                                                  |
+   | Aspect Switch              | ON                                                                                                  |
+   | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _ & $DOCUMENT_ID & _ & $DOCUMENT_TYPE & _ & $TIME```                         |
+   
 ## 4. Updating Document Metadata before exporting
