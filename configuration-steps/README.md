@@ -31,16 +31,16 @@ Please follow these steps for batch class management.
 
 ## 3. CMIS Export
    Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
-   | Property                   | Value                                                                                               |
-   | -------------------------- | --------------------------------------------------------------------------------------------------- |
-   | Cmis Root Folder Name      | sites/hr-department/documentlibrary/Contracts/GeneratedContracts                                    |
-   | Cmis Upload File Extension | demo                                                                                                |
-   | Cmis Server URL            | http://ec2-3-83-105-79.compute-1.amazonaws.com/alfresco/api/-default-/public/cmis/versions/1.1/atom |
-   | Cmis Server User Name      | demo                                                                                                |
-   | Cmis Server User Password  | demo                                                                                                |
-   | Cmis Server Repository Id  | -default-                                                                                           |
-   | Cmis Server Switch ON/OFF  | ON                                                                                                  |
-   | Aspect Switch              | ON                                                                                                  |
-   | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _ & $DOCUMENT_ID & _ & $DOCUMENT_TYPE & _ & $TIME```                         |
+   | Property                   | Value                                                                       |
+   | -------------------------- | --------------------------------------------------------------------------- |
+   | Cmis Root Folder Name      | sites/hr-department/documentlibrary/Contracts/GeneratedContracts            |
+   | Cmis Upload File Extension | demo                                                                        |
+   | Cmis Server URL            | http://\<host-name\>/alfresco/api/-default-/public/cmis/versions/1.1/atom   |
+   | Cmis Server User Name      | demo                                                                        |
+   | Cmis Server User Password  | demo                                                                        |
+   | Cmis Server Repository Id  | -default-                                                                   |
+   | Cmis Server Switch ON/OFF  | ON                                                                          |
+   | Aspect Switch              | ON                                                                          |
+   | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _ & $DOCUMENT_ID & _ & $DOCUMENT_TYPE & _ & $TIME``` |
    
 ## 4. Updating Document Metadata before exporting
