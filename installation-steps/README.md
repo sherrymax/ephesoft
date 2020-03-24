@@ -28,12 +28,12 @@ The 'details.properties' file is available at 'Ephesoft Installation Folder\depe
 5.  Open the command line by running it as `Administrator` and navigate to the `Ephesoft Installation Folder\dependencies\license-util` directory
 6.  Type `install-license.bat` and run it `TWICE`.
 7.  Restart the `Ephesoft services` to reset the license details. ![ephesoft-service](resources/5.png)
-9.  Open browser and go to `http://localhost:8080/dcma/` using `ephesoft/demo`.
+9.  Open browser and go to `http://<host-name>:8080/dcma/` using `ephesoft/demo`.![home](resources/6.png)
 
 ```
 Tip: If you have errors when trying to run Ephesoft, try the following:
 
-Open regedit and set the User permissions to Full Control for the following Key: HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Prefs\com\ephesoft  then Repeat steps 2-3.
+Open regedit and set the User permissions to Full Control for the following Key: HKEY_LOCAL_MACHINE\SOFTWARE\JavaSoft\Prefs\com\ephesoft  then Repeat steps 5-6.
 Please Re-run the Full.bat file located in the Ephesoft Installation Folder\dependencies\license directory and re-send the details.properties file to licenses@ephesoft.com.
 
 Important: Licenses are based on MAC addresses, any changes to the MAC addresses on the machine require a new license. (The following devices use MAC addresses: NICs, WLAN, VPN, Virtual Network adapters, VM Network adapters and Bluetooth)
