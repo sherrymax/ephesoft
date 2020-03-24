@@ -2,7 +2,7 @@
 
 1. Select the Ephesoft AMI from the AWS console.
 2. Review and Launch an EC2 Instance.
-3. Note down the IP address of this Ephesoft EC2 Instance.
+3. Note down the `IP address` of this Ephesoft EC2 Instance.
 4. Add it to the Inbound Rules list of the ACS EC2 Instance's Security Group.
 5. RDP and connect to the Ephesoft instance using `administrator/Ephe$0ft`.
 ```
