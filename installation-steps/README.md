@@ -5,7 +5,7 @@
 2. Review and Launch an EC2 Instance.
 3. Note down the `IP address` of this Ephesoft EC2 Instance.
 4. Add it to the Inbound Rules list of the ACS EC2 Instance's Security Group in order to establish the network between EC2 instances that run ACS and Ephesoft.
-5. RDP and connect to the Ephesoft instance using `administrator/Ephe$0ft`.
+5. RDP and connect to the Ephesoft instance using `administrator/Ephe$0ft`.![rdp-details](resources/4.png)
 ```
 P.S : If you are using a Mac, do install Remote Desktop Connection app.
 ```
