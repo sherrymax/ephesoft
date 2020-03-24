@@ -12,4 +12,8 @@ Please follow these steps for batch class management.
 8. Create Key-Value pairs to mention the keys and values to be extracted.![](resources/8.png)![](resources/9.png)
 ![](resources/10.png)
 8. Make sure all the changes are saved and deployed by clicking the `Apply` and `Deploy` buttons.
-## 2. 
+## 2. CMIS Import
+1. Make sure the values are entered correctly for importing documents from ACS to Ephesoft.![](resources/11.png)
+## 3. CMIS Export
+1. Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
+## 4. Updating Document Metadata before exporting
