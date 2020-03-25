@@ -29,6 +29,7 @@ Please follow these steps for batch class management.
 | CMIS Version   | 1.1                                                       |
 | Enabled        | checked                                                   |
 
+More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/install-and-upgrade/4-1-0-0/cmis-import/)
 ## 3. CMIS Export
    Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
    | Property                   | Value                                                                       |
@@ -43,4 +44,6 @@ Please follow these steps for batch class management.
    | Aspect Switch              | ON                                                                          |
    | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _ & $DOCUMENT_ID & _ & $DOCUMENT_TYPE & _ & $TIME``` |
    
+   More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/cmis-export-plugin-documentation/)
+
 ## 4. Updating Document Metadata before exporting
