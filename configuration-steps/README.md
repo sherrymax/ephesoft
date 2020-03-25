@@ -11,7 +11,8 @@ Please follow these steps for batch class management.
 7. Select an Index Type related to a Document Type![](resources/7a.png)
 8. Create Key-Value pairs to mention the keys and values to be extracted.![](resources/8.png)![](resources/9.png)
 ![](resources/10.png)
-8. Make sure all the changes are saved and deployed by clicking the `Apply` and `Deploy` buttons.
+9. Make sure all the changes are saved and deployed by clicking the `Apply` and `Deploy` buttons.
+   
 ## 2. CMIS Import
    Make sure the values are entered correctly for importing documents from ACS to Ephesoft.![](resources/11.png)
 
@@ -30,6 +31,25 @@ Please follow these steps for batch class management.
 | Enabled        | checked                                                   |
 
 More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/install-and-upgrade/4-1-0-0/cmis-import/)
+
+# Cron job expression
+For cron job expression which specify the interval at which CMIS server need to be monitored, user needs to update property `cmisImport.cronxpression` available in `Ephesoft_Home/WEB-INF/classes/META-INF/dcma-cmis-import/cmis-import.properties` file.
+
+```
+cmisImport.cronxpression=0 0/15 * ? * *
+```
+
+Default value for this property is set to every 15 mins.
+
+# Disabling/Enabling CMIS import functionality
+For enabling/disabling CMIS import functionality user can uncomment/comment the following line in `Ephesoft_Home\applicationContext.xml`
+
+```
+<import resource=”classpath:/META-INF/applicationContext-dcma-cmis-import.xml” />
+```
+
+By default: CMIS import is disabled.
+
 ## 3. CMIS Export
    Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
    | Property                   | Value                                                                       |
@@ -46,4 +66,7 @@ More details are available at [Ephesoft Documentation](https://ephesoft.com/docs
    
    More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/cmis-export-plugin-documentation/)
 
-## 4. Updating Document Metadata before exporting
+## 4. Updating Document Metadata before exporting.
+A mapping document is required to update the metadata of a scan-captured document with the captured values. Ephesoft uses `aspects-mapping.properties` file as the mapping document. 
+
+More information on syntax of this file is available at  [Ephesoft Documentation](https://ephesoft.com/docs/features-and-functions/administrator/moduleplugin-configuration/export-module/cmis-export-plugin-3/)
