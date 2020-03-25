@@ -32,24 +32,6 @@ Please follow these steps for batch class management.
 
 More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/install-and-upgrade/4-1-0-0/cmis-import/)
 
-# 2a. Cron job expression
-For cron job expression which specify the interval at which CMIS server need to be monitored, user needs to update property `cmisImport.cronxpression` available in `Ephesoft_Home/WEB-INF/classes/META-INF/dcma-cmis-import/cmis-import.properties` file.
-
-```
-cmisImport.cronxpression=0 0/15 * ? * *
-```
-
-Default value for this property is set to every 15 mins.
-
-# 2b. Disabling/Enabling CMIS import functionality
-For enabling/disabling CMIS import functionality user can uncomment/comment the following line in `Ephesoft_Home\applicationContext.xml`
-
-```
-<import resource=”classpath:/META-INF/applicationContext-dcma-cmis-import.xml” />
-```
-
-By default: CMIS import is disabled.
-
 ## 3. CMIS Export
    Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
    | Property                   | Value                                                                       |
@@ -71,7 +53,25 @@ A mapping document is required to update the metadata of a scan-captured documen
 
 More information on syntax of this file is available at  [Ephesoft Documentation](https://ephesoft.com/docs/features-and-functions/administrator/moduleplugin-configuration/export-module/cmis-export-plugin-3/)
 
-# 5. Troubleshooting
+## 5. Cron job expression
+For cron job expression which specify the interval at which CMIS server need to be monitored, user needs to update property `cmisImport.cronxpression` available in `Ephesoft_Home/WEB-INF/classes/META-INF/dcma-cmis-import/cmis-import.properties` file.
+
+```
+cmisImport.cronxpression=0 0/15 * ? * *
+```
+
+Default value for this property is set to every 15 mins.
+
+## 6. Disabling/Enabling CMIS import functionality
+For enabling/disabling CMIS import functionality user can uncomment/comment the following line in `Ephesoft_Home\applicationContext.xml`
+
+```
+<import resource=”classpath:/META-INF/applicationContext-dcma-cmis-import.xml” />
+```
+
+By default: CMIS import is disabled.
+
+## 7. Troubleshooting
 
 | Error message                              | Possible root cause                                                                                                                                           |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
