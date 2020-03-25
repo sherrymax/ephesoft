@@ -32,7 +32,7 @@ Please follow these steps for batch class management.
 
 More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/install-and-upgrade/4-1-0-0/cmis-import/)
 
-# Cron job expression
+# 2a. Cron job expression
 For cron job expression which specify the interval at which CMIS server need to be monitored, user needs to update property `cmisImport.cronxpression` available in `Ephesoft_Home/WEB-INF/classes/META-INF/dcma-cmis-import/cmis-import.properties` file.
 
 ```
@@ -41,7 +41,7 @@ cmisImport.cronxpression=0 0/15 * ? * *
 
 Default value for this property is set to every 15 mins.
 
-# Disabling/Enabling CMIS import functionality
+# 2b. Disabling/Enabling CMIS import functionality
 For enabling/disabling CMIS import functionality user can uncomment/comment the following line in `Ephesoft_Home\applicationContext.xml`
 
 ```
@@ -70,3 +70,10 @@ By default: CMIS import is disabled.
 A mapping document is required to update the metadata of a scan-captured document with the captured values. Ephesoft uses `aspects-mapping.properties` file as the mapping document. 
 
 More information on syntax of this file is available at  [Ephesoft Documentation](https://ephesoft.com/docs/features-and-functions/administrator/moduleplugin-configuration/export-module/cmis-export-plugin-3/)
+
+# 5. Troubleshooting
+
+| Error message                              | Possible root cause                                                                                                                                           |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unable to connect to the server            | Invalid configuration being used for making connection to the cmis server.                                                                                    |
+| Error while generating cmis properties xml | Either Ephesoft Application doesn’t have access to write the properties on the disk or Ephesoft was unable to connect to network path while writing the file. |
