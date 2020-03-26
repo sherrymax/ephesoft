@@ -51,6 +51,8 @@ More details are available at [Ephesoft Documentation](https://ephesoft.com/docs
 ## 4. Updating Document Metadata before exporting.
 A mapping document is required to update the metadata of a scan-captured document with the captured values. Ephesoft uses `aspects-mapping.properties` file as the mapping document. 
 
+A sample `aspects-mapping.properties` file is available ![here](resources/aspects-mapping.properties).
+
 More information on syntax of this file is available at  [Ephesoft Documentation](https://ephesoft.com/docs/features-and-functions/administrator/moduleplugin-configuration/export-module/cmis-export-plugin-3/)
 
 ## 5. Cron job expression
