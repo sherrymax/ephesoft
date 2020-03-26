@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://github.com/sherrymax/ephesoft/blob/master/Logo.png">
 </p>
+
 [Ephesoft](http://www.ephesoft.com) is one of the [Alfresco](http://www.alfresco.com) partners performing Scan and Capture (OCR) implementations.
 
 This is a reference article that can be used for :
