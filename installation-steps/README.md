@@ -21,7 +21,8 @@ slmgr -rearm
 1. Send a request to tickets@ephesoft.com to create a Customer Portal account.
 2. To submit a new license request, please log in to [License Management page](https://ephesoft.force.com/login?ec=302&startURL=%2Fs%2Flicenses).![license-request](resources/3.png)
 ```
-The 'details.properties' file is available at 'Ephesoft Installation Folder\dependencies\license' directory.
+The 'details.properties' file is available at 'Ephesoft Installation Folder\dependencies\licensing' directory.
+Eg : C:\Ephesoft\Dependencies\licensing
 ```
 3.  Perform the following steps once you receive the valid license `ephesoft.lic` file.
 4.  Copy the ephesoft.lic file to the following location: `Ephesoft Installation Folder\dependencies\license-util` directory.
