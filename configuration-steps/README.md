@@ -1,7 +1,9 @@
 # Ephesoft Configuration Steps
 
 ## 1. Prepare and manage batch classes
+
 Please follow these steps for batch class management.
+
 1. Login to [Batch Class Management](http://<host-name>:8080/dcma/BatchClassManagement.html)![](resources/1.png)
 2. Credentials -  `ephesoft/demo`![](resources/3.png)
 3. Successful login will route to this Batch Class Management screen. Double click the last row, which is the Batch Class created for this tutorial. ![](resources/4.png)
@@ -14,8 +16,9 @@ A sample contract document is available [here](resources/Sample-ContractDocument
 8. Create Key-Value pairs to mention the keys and values to be extracted.![](resources/8.png)![](resources/9.png)
 ![](resources/10.png)
 9. Make sure all the changes are saved and deployed by clicking the `Apply` and `Deploy` buttons.
-   
+
 ## 2. CMIS Import
+
    Make sure the values are entered correctly for importing documents from ACS to Ephesoft.![](resources/11.png)
 
 | Property       | Value                                                     |
@@ -25,7 +28,7 @@ A sample contract document is available [here](resources/Sample-ContractDocument
 | Password       | demo                                                      |
 | Repository Id  | -default-                                                 |
 | File Extension | pdf;tif                                                   |
-| Folder         | site/hr-department/documentlibrary/Contracts/Drafts       |
+| Folder         | sites/hr-department/documentlibrary/Contracts/Drafts       |
 | Property       | ephesoft:OCR-ready                                        |
 | Value          | ready                                                     |
 | New Value      | OCR In Progress                                           |
@@ -35,10 +38,11 @@ A sample contract document is available [here](resources/Sample-ContractDocument
 More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/install-and-upgrade/4-1-0-0/cmis-import/)
 
 ## 3. CMIS Export
+
    Make sure the values are entered correctly here for exporting documents from Ephesoft to ACS.![](resources/12.png)
    | Property                   | Value                                                                       |
    | -------------------------- | --------------------------------------------------------------------------- |
-   | Cmis Root Folder Name      | site/hr-department/documentlibrary/Contracts/GeneratedContracts             |
+   | Cmis Root Folder Name      | sites/hr-department/documentlibrary/Contracts/GeneratedContracts             |
    | Cmis Upload File Extension | pdf                                                                         |
    | Cmis Server URL            | http://\<host-name\>/alfresco/api/-default-/public/cmis/versions/1.1/atom   |
    | Cmis Server User Name      | demo                                                                        |
@@ -46,12 +50,13 @@ More details are available at [Ephesoft Documentation](https://ephesoft.com/docs
    | Cmis Server Repository Id  | -default-                                                                   |
    | Cmis Server Switch ON/OFF  | ON                                                                          |
    | Aspect Switch              | ON                                                                          |
-   | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _ & $DOCUMENT_ID & _ & $DOCUMENT_TYPE & _ & $TIME``` |
-   
+   | CMIS Export File Name      | ```$BATCH_IDENTIFIER & _& $DOCUMENT_ID &_ & $DOCUMENT_TYPE & _ & $TIME``` |
+
    More details are available at [Ephesoft Documentation](https://ephesoft.com/docs/cmis-export-plugin-documentation/)
 
-## 4. Updating Document Metadata before exporting.
-A mapping document is required to update the metadata of a scan-captured document with the captured values. Ephesoft uses `aspects-mapping.properties` file as the mapping document. 
+## 4. Updating Document Metadata before exporting
+
+A mapping document is required to update the metadata of a scan-captured document with the captured values. Ephesoft uses `aspects-mapping.properties` file as the mapping document.
 
 P.S: Ensure to update the correct `aspect-mapping.properties` located at your Batch Class's location eg: `C:\Ephesoft\SharedFolders\BCB\cmis-plugin-mapping\aspect-mapping.properties`
 
@@ -62,6 +67,7 @@ P.S: Restarting `Ephesoft Transact` service is NOT necessary to pickup these asp
 More information on syntax of this file is available at  [Ephesoft Documentation](https://ephesoft.com/docs/features-and-functions/administrator/moduleplugin-configuration/export-module/cmis-export-plugin-3/)
 
 ## 5. Cron job expression
+
 For cron job expression which specify the interval at which CMIS server need to be monitored, user needs to update property `cmisImport.cronxpression` available in `Ephesoft_Home/WEB-INF/classes/META-INF/dcma-cmis-import/cmis-import.properties` file.
 
 ```
@@ -71,6 +77,7 @@ cmisImport.cronxpression=0 0/15 * ? * *
 P.S: Even though the default value for this property is 15 mins, it is ok to set the value to 1 min.
 
 ## 6. Disabling/Enabling CMIS import functionality
+
 For enabling/disabling CMIS import functionality user can uncomment/comment the following line in `Ephesoft_Home\applicationContext.xml`
 
 ```
